@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/LOGOIMAGE.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>SUB-G4-Radius Of A Circle And Chord</title>
+<style>
+ .header {
+        position: fixed;
+        width: 100%;
+        background: rgba(0, 0, 51, 0.7); /* Header overlay effect */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #00cc99;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc99;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .hover-image {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+        background: rgba(0, 0, 51, 0.7); /* Footer background color */
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #00cc99;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search-container button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        background-color: #00cc99;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover {
+        background-color: #009973;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.hover-image1 {        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body {
+	background-color: #003366;
+}
+.style3 {
+	color: #0000FF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style4 {
+	color: #000099;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style5 {
+	color: #000066;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style6 {font-family: Georgia, "Times New Roman", Times, serif}
+.style7 {color: #0000FF}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('../image/Radius-Of-A-Circle-And-Chord-thumbnailcopy-1.png')">
+
+<div class="header">
+  <div class="header-container">
+        <div class="logo">SUB-G4</div>
+    <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../ABOUT/About.html">About</a>
+            <div class="dropdown">
+                <a href="Topic.html">Topic</a>
+                <div class="dropdown-content">
+                    <a href="Topic.html">Introduction</a>
+                  	<a href="circum.html"> Circumference of a circle</a>
+				    <a href="radius.html"> Radius of a circle</a>
+                    <a href="equations.html">Equations of a Circle</a>
+                                  </div>
+            </div>
+       <a href="../Aplication/apli.html">Applications</a>
+        <a href="../Resous/resos.html">Resources</a>
+        <a href="../Question &amp; Answers/QAs.html">Questions & Answers</a>      </div>
+  
+  </div>
+</div>
+<div style="margin-top: 110px;">
+<table width="96%" height="7751">  
+  <tr>
+    <th width="613" valign="top" scope="col"><span class="style6">
+      <section id="Introduction">
+      </span>
+      <h1 align="center" class="style5">Radius Of A Circle And Chord</h1>
+      <span class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span>
+      <p class="style6">Radius of a circle is the distance from the center of the circle to any point on it&rsquo;s circumference. It is usually denoted by &lsquo;R&rsquo; or &lsquo;r&rsquo;. This quantity has importance in almost all&nbsp;circle-related formulas. The area and circumference of a circle are also measured in terms of radius.&nbsp;</p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="style6">Circumference of circle = 2&pi; (Radius)
+                <p>Area of circle = &pi; (Radius)&sup2;</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="style6"><span class="style5">Table of content</span></h2>
+      <ul class="style6">
+        <li><a href="#difin">Definition</a></li>
+        <li><a href="#rdc">Radius, Diameter and chords</a> </li>
+        <li><a href="#equ">Equations</a></li>
+        <li><a href="#hr">How to find Radius with Circumference</a> </li>
+        <li><a href="#cctheorem">Chord of a Circle Theorems</a> </li><div class="style6" id="difin"></div>
+        <li><a href="#solved2">Solved Examples</a> </li>
+        <li><a href="#faqs2">FAQs</a></li>
+      </ul>
+      <h2 class="style5">Definition</h2>
+      <p class="style6">A radius is a measure of distance from the center of any circular object to its outermost edge or boundary. A radius is not only a dimension of a circle but also for a sphere, semi-sphere, a cone with a circular base, a cylinder having circular bases.&nbsp;</p>
+      <p class="style6">A circle can be defined as the locus of a point moving in a plane, in such a manner that its distance from a fixed point is always constant. The fixed point is known as the center of the circle and distance between any point on the circle and its center is called the radius of a circle.</p>
+      <h2 class="style6">Diameter of a Circle</h2>
+      <p class="style6">The diameter of a circle is the length of the line starting from one point on a circle to another point and passing through the center of the circle. It is equal to twice the radius of the circle. It is usually denoted by &lsquo;d&rsquo; or &lsquo;D&rsquo;.</p>
+      <p class="style6"><strong>Diameter = 2 x Radius</strong></p>
+      <p class="style6"><strong>Or&nbsp;</strong></p>
+      <p class="style6"><strong>Radius = Diameter/2</strong></p>
+      <p class="style6">Diameter is the longest chord of the circle.&nbsp;</p>
+      <p class="style6">Also, we can express the area and circumference of a circle with respect to the diameter.</p>
+      <p class="style6">Circumference of circle = &pi; (Diameter)</p>
+      <p class="style6">Area of circle = &pi;/4 (Diameter)&sup2;</p>
+	  <div class="style6" id="rdc"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /> </div>
+      <h2 class="style5">Radius, Diameter and Chord</h2>
+      <p class="style6">We have already discussed radius and diameter of circle. Now suppose, there is a line and a Circle given on a plane.&nbsp; The line could touch circle at one point, or intersect at two points or it could be non-intersecting.&nbsp;</p>
+      <p class="style6"><strong>Explanation:</strong></p>
+      <p class="style6">Given a line and a Circle, it could either be touching the circle,&nbsp;interesting line&nbsp;or non-touching.</p>
+      <p class="style6">Consider any line AB and a circle. Then according to the relative positions of the line and the circle, three possibilities can arise as shown in the given figure.</p>
+      <p class="style6"><img src="../image/Radius-Of-A-Circle-And-Chord-1.png" alt="ra" width="750" height="260" /></p>
+      <p class="style6">Line AB intersects the given circle at two distinct points P and Q. The line AB in this case is referred to as secant of the circle. Points P and Q lie on the circumference of the circle, but they do not pass through the center of the circle &lsquo;O&rsquo;, hence&nbsp;line segment&nbsp;PQ is known as a chord of the circle as its endpoints lie on the circle.</p>
+      <p class="style6">Therefore the chord of a circle can be defined as a line segment joining any two distinct points on the circle&rsquo;s circumference. A chord passing through the center of a circle is known as the diameter of the circle and it is the largest chord of the circle. This diameter is twice that of the radius of a circle i.e. D=2r, where &lsquo;D&rsquo; is the diameter and &lsquo;r&rsquo; is the radius.</p>
+      <h1 align="center" class="style3"><img src="../image/Radius-Of-A-Circle-And-Chord-3.png" alt="re" width="520" height="378" /></h1>
+      <p class="style6">Radius of a circle = Diameter/2<br />
+        Or</p>
+      <p class="style6">Diameter of a circle = 2 x Radius</p>
+	  <div class="style6" id="equ"></div>
+      <p class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /> </p>
+      <h2 class="style4">Equation</h2>
+      <p class="style6">The equation of a circle includes the radius and it is given by:</p>
+      <p class="style6">(x-h)&sup2;+ (y-k)&sup2;= r&sup2;</p>
+      <p class="style6">Where (h,k) is the center of circle.</p>
+      <h2 class="style6">Radius of circle from Area</h2>
+      <p class="style6">Since, the formula for area of a circle is given by:</p>
+      <p class="style6">Area of circle = &pi;(Radius)&sup2;</p>
+      <p class="style6">Therefore,</p>
+      <p class="style6">Radius&sup2;= Area/&pi;</p>
+      <p class="style6">Radius = &radic;(Area/&pi;)</p>
+	  <div class="style6" id="hr"></div>
+      <p class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /> </p>
+      <h2 class="style4">How to find Radius with Circumference?</h2>
+      <p class="style6">If we know the circumference of the circle, then we can easily find its radius. Let us understand by example.</p>
+      <p class="style6">Suppose, the circumference is 40 cms, then find the radius.</p>
+      <p class="style6">Since, Circumference, C = 2&pi;r</p>
+      <p class="style6">R = C/2&pi;</p>
+      <p class="style6">R = 40/2&pi;</p>
+      <p class="style6">R = 6.37 cm</p>
+      <h2 class="style6">Radius Formula</h2>
+      <p class="style6">With respect to area and circumference, we can write the formula for the radius as:</p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="style6">R = C/2&pi; And R =&nbsp; &radic;(A/&pi;)
+                <p>Also, R = D/2</p></td>
+          </tr>
+        </tbody>
+      </table>
+	  <div class="style6" id="cctheorem"></div>
+      <h2 class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /> </h2>
+      <h2 class="style4">Chord of a Circle Theorems</h2>
+      <p class="style6"><strong>Theorem 1:</strong>&nbsp;The perpendicular line drawn from the center of a circle to a chord bisects the chord.</p>
+      <div align="center" class="style6"><br />
+        <img src="../image/Radius-Of-A-Circle-And-Chord-4.png" alt="dg" width="500" height="378" />      </div>
+      <p class="style6"><strong>Given:&nbsp;</strong>AB= Chord; OC&perp;AB</p>
+      <p class="style6"><strong>To prove:&nbsp;</strong>AC=BC</p>
+      <p class="style6"><strong>Construction:</strong>&nbsp;Draw OA and OB</p>
+      <p class="style6"><strong>Proof:</strong></p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="style6"><strong>S. No.</strong></td>
+            <td class="style6"><strong>Statement</strong></td>
+            <td class="style6"><strong>Reason</strong></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="style6"><strong>In &Delta;OAC and &Delta;OBC</strong></td>
+          </tr>
+          <tr>
+            <td class="style6">1</td>
+            <td class="style6">OA = OB</td>
+            <td class="style6">Radii of the same circle</td>
+          </tr>
+          <tr>
+            <td class="style6">2</td>
+            <td class="style6">OC = OC</td>
+            <td class="style6">Common</td>
+          </tr>
+          <tr>
+            <td class="style6">3</td>
+            <td class="style6">&ang;OCA = &ang;OCB</td>
+            <td class="style6">Each angle measure 90 degrees</td>
+          </tr>
+          <tr>
+            <td class="style6">4</td>
+            <td class="style6">&Delta;OAC &cong; &Delta;OBC</td>
+            <td class="style6">By RHS congruence criterion</td>
+          </tr>
+          <tr>
+            <td class="style6">5</td>
+            <td class="style6">AC = CB</td>
+            <td class="style6">By CPCT (Corresponding parts of congruent triangles)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="style6">The converse of the above theorem is also true.</p>
+      <p class="style6"><strong>Theorem 2:&nbsp;</strong>The line drawn through the centre of the circle to bisect a chord is perpendicular to the chord.</p>
+      <div align="center" class="style6"><br />
+        <img src="../image/Radius-Of-A-Circle-And-Chord-5.png" alt="t4" width="485" height="378" />      </div>
+      <p class="style6"><strong>Given:&nbsp;</strong>C is the midpoint of the chord AB of the circle with centre of circle at O</p>
+      <p class="style6"><strong>To prove:&nbsp;</strong>OC&perp;AB</p>
+      <p class="style6"><strong>Construction:</strong>&nbsp;Join OA, OB and OC</p>
+      <p class="style6"><strong>Proof:</strong></p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="style6">S.No.</td>
+            <td class="style6">Statement</td>
+            <td class="style6">Reason</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="style6">In &#8710;OAC and &#8710;OBC</td>
+          </tr>
+          <tr>
+            <td class="style6">1</td>
+            <td class="style6">OA = OB</td>
+            <td class="style6">Radii of the same circle</td>
+          </tr>
+          <tr>
+            <td class="style6">2</td>
+            <td class="style6">OC = OC</td>
+            <td class="style6">Common side</td>
+          </tr>
+          <tr>
+            <td class="style6">3</td>
+            <td class="style6">AC = BC</td>
+            <td class="style6">Given</td>
+          </tr>
+          <tr>
+            <td class="style6">4</td>
+            <td class="style6">&#8710;OAC&nbsp;&cong;&nbsp;&#8710;OBC</td>
+            <td class="style6">By SSS congruency</td>
+          </tr>
+          <tr>
+            <td class="style6">5</td>
+            <td class="style6">&ang;1 = &ang;2</td>
+            <td class="style6">Corresponding parts of congruent triangle</td>
+          </tr>
+          <tr>
+            <td class="style6">6</td>
+            <td class="style6">&ang;1 + &ang;2 = 180&deg;</td>
+            <td class="style6">Linear pair angles</td>
+          </tr>
+          <tr>
+            <td class="style6">7</td>
+            <td class="style6">&ang;1 = &ang;2 = 90&deg;</td>
+            <td class="style6">From statements 5 and 6</td>
+          </tr>
+          <tr>
+            <td class="style6">8</td>
+            <td class="style6">OC&nbsp;&perp; AB</td>
+            <td class="style6">From statement 7</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 align="left" class="style3">Video Lessons<a href="https://youtu.be/Jw-fijHnAjk"><img src="../image/Radius-Of-A-Circle-And-Chord-thumbnail-1.png" alt="c" width="696" height="477" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../image/Radius-Of-A-Circle-And-Chord-thumbnailcopy-1.png',1)" onmouseout="MM_swapImgRestore()" /></a></h1>
+      <div class="style6" id="solved2"></div>
+	  <h2 class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /> </h2>
+      <h2 class="style3">Solved Examples</h2>
+      <p class="style6">Let us see some solved problems on radius and chord of a circle.</p>
+      <p class="style6"><strong>Example 1:&nbsp;</strong>Find the radius of the circle if its diameter is 16 cm.</p>
+      <p class="style6"><strong>Solution:</strong></p>
+      <p class="style6">Given,</p>
+      <p class="style6">Diameter of circle = 16 cm</p>
+      <p class="style6">Radius of circle = Diameter/2</p>
+      <p class="style6">= 16/2</p>
+      <p class="style6">= 8 cm</p>
+      <p class="style6"><strong>Example 2:</strong>&nbsp;If the length of the chord of a circle is 8 cm and the perpendicular distance from the centre to the chord is 3 cm, then what is the radius of the circle?</p>
+      <p class="style6"><strong>Solution:</strong></p>
+      <p class="style6">Let us draw a circle as per the given information.</p>
+      <div align="center" class="style6"><img src="../image/Radius-Of-A-Circle-And-Chord-7.png" alt="fd" width="522" height="378" />      </div>
+      <p class="style6">Length of the chord = AB = 8 cm</p>
+      <p class="style6">Perpendicular distance = OP = 3 cm</p>
+      <p class="style6">Radius = OA</p>
+      <p class="style6">We know that, the perpendicular line drawn from the center of a circle to a chord bisects the chord.</p>
+      <p class="style6">AP = PB = 4 cm</p>
+      <p class="style6">In triangle OPA,</p>
+      <p class="style6">BY Pythagoras theorem,</p>
+      <p class="style6">OA&sup2;= OP&sup2;+ AP&sup2;</p>
+      <p class="style6">OA&sup2;= 9 + 16</p>
+      <p class="style6">OA&sup2;= 25</p>
+      <p class="style6">OA = 5</p>
+      <p class="style6">Therefore, radius = 5 cm</p>
+	  <div class="style6" id="faqs2"></div>
+      <p class="style6"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <div class="style6" id="Frequently-Asked-Questions-&ndash;-FAQs">
+        <h2 align="center" class="style7">Frequently Asked Questions &ndash; FAQs</h2>
+        <div>
+          <div itemscope="" itemtype="https://schema.org/FAQPage">
+            <div>Q1</div>
+            <div>
+              <h3 itemprop="name">What is the radius of circle?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">The length or the distance from the center of the circle to anypoint on the circle is called radius. It is denoted by &lsquo;r&rsquo; or &lsquo;R&rsquo;.</div>
+              </div>
+            </div>
+            <div>Q2</div>
+            <div>
+              <h3 itemprop="name">What is the relation between radius and diameter of a circle?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">Radius is equal to half of the diameter of the circle. If the diameter is 10 cm, then radius will be equal to 5 cm.</div>
+              </div>
+            </div>
+            <div>Q3</div>
+            <div>
+              <h3 itemprop="name">What is the equation of circle centered at (1,2) with radius equal 3cm?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">Using equation of the circle formula,<br />
+                  (x-1)&sup2;+ (y-2)&sup2;= 3&sup2;<br />
+                  (x&minus;1)&sup2;+(y&minus;2)&sup2;= 9<br />
+                  (x&sup2;&minus;2x+1)+(y&sup2;&minus;4y+4) = 9<br />
+                  X&sup2;+ y&sup2;&minus;2x&minus;4y&minus;4 = 0<br />
+                  This is the final equation.</div>
+              </div>
+            </div>
+            <div>Q4</div>
+            <div>
+              <h3 itemprop="name">What is the value of radius, if the area of circle is 78.54 sq cm?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">Since, radius = &radic;(Area/&pi;)<br />
+                  Given, area = 78.54 sq.cm and &pi; = 22/7<br />
+                  Therefore,<br />
+                  Radius = &radic;(78.54/(22/7))<br />
+                  Radius = 5 cm (Approximately)</div>
+              </div>
+            </div>
+            <div>Q5</div>
+            <div>
+              <h3 itemprop="name">If the circumference of a circle is 100 cms, then find the radius?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">Radius = Circumference/2&pi;<br />
+                  R = 100/2&pi;<br />
+                  R = 15.92 cm.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      <p align="left" class="style3">&nbsp;</p>    </th>
+    <th width="487" valign="top" scope="col"><div align="center">
+      <p><img src="../image/banner2.png" alt="banner" width="470" height="676" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/download (1).jpeg" alt="ftf" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/images (12).jpeg" alt="gfy" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/GEOMETRIC MOTION GRAPHIC ANIMATION.gif" alt="gif" width="400" height="225" /></p>
+    </div></th>
+  </tr>
+</table>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, values, and team.</p>
+            <a href="#">Our History</a>
+            <a href="#">Mission & Values</a>
+            <a href="#">Meet the Team</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

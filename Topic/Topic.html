@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/LOGOIMAGE.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>SUB-G4-TOPIC</title>
+<style>
+ .header {
+        position: fixed;
+        width: 100%;
+        background: rgba(0, 0, 51, 0.7); /* Header overlay effect */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #00cc99;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc99;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color:#FFFFFF;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .hover-image {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+        background: rgba(0, 0, 51, 0.7); /* Footer background color */
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #00cc99;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search-container button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        background-color: #00cc99;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+	.a {text-decoration:none;
+	}
+	
+    .search-container button:hover {
+        background-color: #009973;
+    }
+	.style1 {font-family: "Times New Roman", Times, serif}
+</style>
+
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.hover-image1 {        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body {
+	background-color: #003366;
+}
+.style2 {color: #0000CC}
+.style3 {color: #0000FF}
+.style5 {
+	font-size: 18px;
+	color: #000000;
+}
+.style6 {font-size: 18px}
+.style7 {
+	color: #0000CC;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: x-large;
+}
+.style8 {color: #0000FF; font-family: Georgia, "Times New Roman", Times, serif; }
+</style>
+
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('../image/Introduction-to-Circles copy.jpg','../image/Area-of-a-circle copy.jpg','../image/All-about-circles copy.jpg','../image/Parts-of-circlecopy.jpg')">
+
+<div class="header">
+  <div class="header-container">
+        <div class="logo">SUB-G4</div>
+    <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../ABOUT/About.html">About</a>
+            <div class="dropdown">
+                <a href="Topic.html">Topic</a>
+                <div class="dropdown-content">
+                    <a href="Topic.html">Introduction</a>
+                    <a href="circum.html"> Circumference of a circle</a>
+				    <a href="radius.html"> Radius of a circle</a>
+                    <a href="equations.html">Equations of a Circle</a>
+              </div>
+            </div>
+       <a href="../Aplication/apli.html">Applications</a>
+        <a href="../Resous/resos.html">Resources</a>
+        <a href="../Question &amp; Answers/QAs.html">Questions & Answers</a>      </div>
+ 
+  </div>
+</div>
+ <div style="margin-top: 110px;">
+ </p>
+<table width="93%" height="100%">  
+  <tr>
+    <th width="613" valign="top" scope="col"><section id="Introduction">
+      <h1 align="center" class="style3"><span class="style8">INTRODUCTION TO CIRCLE</span></h1>
+      <p class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /><br />
+        <span class="style1 style5">A circle is a basic geometric shape defined by all points equidistant from a central point. Key features include the radius, circumference, and diameter. Circles are essential in mathematics, science, and various fields for their symmetry and properties, making them fundamental in both theory and practical applications.</span></p>
+      <h2 class="style3">Table of content:</h2>
+      <ol>
+        <li><a href="#proper" target="_self">Properties of a Circle</a></li>
+        <li><a href="#video">Video lessons on circle</a></li>
+        <li><a href="#solved">Circle Solved Problems</a></li>
+        <li><a href="#try">Practics /  Try questions</a></li>
+        <li><a href="#faqs">FAQs on properties of a circle</a></li>
+      </ol>
+      <div id="proper"></div>
+      <p><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span><br />
+      </p>
+      <div id="proper">
+        <h2 class="style3">Properties of A Circle </h2>
+      </div>
+      <p align="left" class="style6">Lines and circles are the important elementary figures in geometry. We know that a line is a locus of a point moving in a constant direction, whereas the circle is a locus of a point moving at a constant distance from some fixed point. The theoretical importance of the circle is reflected in the number of amazing applications. Here we will discuss the properties of a circle, area and circumference of a circle &nbsp;in detail.</p>
+      <h2 align="left" class="style3">Circle Definition</h2>
+      <p align="center"><img src="../image/circle diff.png" alt="1" width="489" height="251" id="Image2" /></p>
+      <p align="left">The collection of all the points in a plane, which are at a fixed distance from a fixed point in the plane, is called a circle. Here, the fixed point is called the centre &ldquo;O&rdquo;. Some of the important terminologies used in the circle are as follows:</p>
+      <p align="center"><img src="../image/circle proper.png" alt="2" width="470" height="301" id="Image5" /></p>
+      <table width="675" height="338">
+        <tr>
+          <th scope="col"><h3 class="style6"><strong>Terms&nbsp;</strong></h3></th>
+          <th scope="col"><h3 class="style6"><strong>Description</strong></h3></th>
+        </tr>
+        <tr>
+          <th scope="row"><p class="style1 style6"><strong>Circumference</strong></p></th>
+          <td><p class="style1 style6">The boundary of the circle is known as the circumference</p></td>
+        </tr>
+        <tr>
+          <th scope="row"><p class="style1 style6"><strong>Radius</strong></p></th>
+          <td><p class="style1 style6">The line from the centre &ldquo;O&rdquo; of the circle to the circumference of the circle is called the radius and it is denoted by &ldquo;R&rdquo; or &ldquo;r&rdquo;</p></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Diameter</strong></span></td>
+          <td><span class="style6">The line that passes through the centre of the circle and touches the two points on the circumference is called the diameter and<br />
+  it is denoted by the symbol &ldquo;D&rdquo; or &ldquo;d&rdquo;</span></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Arc</strong></span></td>
+          <td><span class="style6">Arc is the part of the circumference where the largest arc is called the major arc and the smaller one is called the minor arc</span></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Sector</strong></span></td>
+          <td><span class="style6">Sector is slice of a circle bounded by two radii and the included arc of a circle</span></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Chord</strong></span></td>
+          <td><span class="style6">The straight line that joins any two points on the circumference of a circle is called the chord</span></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Tangent</strong></span></td>
+          <td><span class="style6">A line that touches the circumference of a circle at a point is called the tangent</span></td>
+        </tr>
+        <tr>
+          <td><span class="style6"><strong>Secant</strong></span></td>
+          <td><span class="style6">A line that cuts the circle at the two distinct points is known as the secant</span></td>
+        </tr>
+      </table>
+      <p align="left">&nbsp;</p>
+      <h2 align="left" class="style3">Circle Properties</h2>
+      <p align="left">Some of the important properties of the circle are as follows:</p>
+      <div align="left">
+        <ul>
+          <li>
+            <p>The circles are said to be congruent if they have equal radii</p>
+          </li>
+          <li>
+            <p>The diameter of a circle is the longest chord of a circle</p>
+          </li>
+          <li>
+            <p>Equal chords of a circle subtend equal angles at the centre</p>
+          </li>
+          <li>
+            <p>The radius drawn perpendicular to the chord bisects the chord</p>
+          </li>
+          <li>
+            <p>Circles having different radius are similar</p>
+          </li>
+          <li>
+            <p>A circle can circumscribe a rectangle, trapezium, triangle, square, kite</p>
+          </li>
+          <li>
+            <p>A circle can be inscribed inside a square, triangle and kite</p>
+          </li>
+          <li>
+            <p>The chords that are equidistant from the centre are equal in length</p>
+          </li>
+          <li>
+            <p>The distance from the centre of the circle to the longest chord (diameter) is zero</p>
+          </li>
+          <li>
+            <p>The perpendicular distance from the centre of the circle decreases when the length of the chord increases</p>
+          </li>
+          <li>
+            <p>If the tangents are drawn at the end of the diameter, they are parallel to each other</p>
+          </li>
+          <li>
+            <p>An isosceles triangle is formed when the radii joining the ends of a chord to the centre of a circle</p>
+          </li>
+        </ul>
+      </div>
+      <p align="left">Circle Formulas</p>
+      <p align="left">Area of a circle, A = &pi;r&sup2; square units</p>
+      <p align="left">The circumference of a circle = 2&pi;r units</p>
+      <p align="left">The circumference of a circle formula can also be written as &pi;d.</p>
+      <p align="left">Where,</p>
+      <p align="left">Diameter = 2 x Radius</p>
+      <p align="left">d = 2r</p>
+	  <div id="video">
+      <p align="left"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h1 align="left" class="style3">Video Lessons on Circle</h1></div>
+      <table width="98%" height="579">
+        <tr>
+          <th width="49%" height="269" valign="top" scope="col"><h3 align="center">Introduction to Circles
+              <br />
+              <a href="https://youtu.be/m9dpeG2rKdY" class="hover-image1"><img src="../image/Introduction-to-Circles.jpg" alt="intro" width="291" height="213" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../image/Introduction-to-Circles copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></h3>          </th>
+          <th width="51%" valign="top" scope="col"><h3 align="center">Parts of a Circle<br />
+              <a href="https://youtu.be/DeRWtRwXrT4" onmouseover="MM_swapImage('Image2','','../image/Parts-of-circlecopy.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../image/Parts-of-circle.jpg" alt="pat" width="291" height="213" border="0" /></a></h3>          </th>
+        </tr>
+        <tr>
+          <th height="302" valign="top" scope="row"><h3 align="center">Area of a Circle<br />
+              <a href="https://youtu.be/HE12r4vCwII"><img src="../image/Area-of-a-circle.jpg" alt="area" width="291" height="213" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','../image/Area-of-a-circle copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></h3>          </th>
+          <td valign="top"><h3 align="center">All about Circles<br />
+                <a href="https://youtu.be/CTDtiXHorgc"><img src="../image/All-about-circles.jpg" alt="all" width="291" height="213" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','../image/All-about-circles copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><br />
+          </h3>          </td>
+        </tr>
+      </table>
+	  <div id="solved">
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2 class="style3">Circle Solved Problems</h2></div>
+      <p align="left">The sample examples to find the area and circumference of a circle is given below.</p>
+      <p align="left"><strong>Example 1:</strong></p>
+      <p align="left">Find the area and circumference of a circle having the diameter value of 10 cm.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given:</p>
+      <p align="left">Diameter, d = 10 cm</p>
+      <p align="left">We know that diameter = 2 x Radius</p>
+      <p align="left">Therefore, radius, r = d/2</p>
+      <p align="left">r = 10/2 = 5</p>
+      <p align="left">So, the radius is 5 cm.</p>
+      <p align="left">Area of a circle, A = &pi;r&sup2; square units</p>
+      <p align="left">A = 3.14 x 5 x 5</p>
+      <p align="left">Where ,</p>
+      <p align="left">&pi; = 3.14</p>
+      <p align="left">A = 3.14 x 25</p>
+      <p align="left">A = 78.5 cm2</p>
+      <p align="left">Therefore, the area of a circle is 78.5 square units</p>
+      <p align="left">The circumference of a circle = 2&pi;r units</p>
+      <p align="left">C = 2 x 3.14 x 5</p>
+      <p align="left">C = 10 x 3.14</p>
+      <p align="left">C = 31. 4 cm</p>
+      <p align="left">Therefore, the circumference of a circle is 31.4 units.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 2:</strong></p>
+      <p align="left">A circle is cut out from a square paper of side 7 cm, if the diameter of the circle is equal to the side of the square, find how much paper is left after cutting out the circle.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Side of square = 7 cm</p>
+      <p align="left">Diameter of circle = 7 cm</p>
+      <p align="left">Radius of circle = 7/2 cm</p>
+      <p align="left">Paper left after cutting out the circle = Area of square paper &ndash; Area of circle</p>
+      <p align="left">= side&sup2; (&pi;r&sup2;) = 72&ndash; [22/7 &times; (7/2)2]</p>
+      <p align="left">= 49 &ndash; 38.5</p>
+      <p align="left">= 10.5 cm2</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 3:</strong></p>
+      <p align="left">Find the distance covered by a wheel of radius 56 cm in 20 revolutions.&nbsp;</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Radius of wheel = 56 cm</p>
+      <p align="left">Circumference of wheel = 2&pi;r = 2 &times; 22/7 &times; 56 = 352 cm&nbsp;</p>
+      <p align="left">Distance covered in 20 revolutions = 20 &times; 352 = 7040 cm = 70.40 m&nbsp;</p>
+      <div id="try"></div>
+	  <p align="left"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2 align="center" class="style2">Practice / Try Questions</h2>
+      <div align="left">
+        <ol>
+          <li>Find the radius of the circle whose area is 1386 cm&sup2;.</li>
+          <li>Find the area swept by the minute hand of length 7 cm of the clock in an hour.</li>
+          <li>Find the area of a circle if the circumference of the circle is&nbsp; 31.4 m&sup2;.</li>
+        </ol>
+      </div>
+      <p align="left">For more interesting information on the properties of a circle,<a href="../Question &amp; Answers/QAs.html"> click here   </a>for more questions &amp; answers or <a href="../Aplication/apli.html">click here</a> to use The Learning App and also watch <a href="../Resous/resos.html">linked videos</a> on youtube to learn with ease.</p>
+      <table width="97%" height="131">
+        <tr>
+		<div id="faqs"></div>
+          <th scope="col"><div align="left"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></div></th>
+        </tr>
+      </table>
+      <h2 align="center" class="style7">Frequently Asked Questions on Properties of Circle</h2>
+      <div>
+        <div itemscope="" itemtype="https://schema.org/FAQPage">
+          <div>
+            <div align="left">Q1</div>
+          </div>
+          <div>
+            <h3 align="left" itemprop="name">What is the condition for the congruency of circles?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p align="left">If the given circles have equal radii then the circles are congruent.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div align="left">Q2</div>
+          </div>
+          <div>
+            <h3 align="left" itemprop="name">What is the condition for the similarity of circles?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p align="left">Every circle is similar to each other irrespective of its radii.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div align="left">Q3</div>
+          </div>
+          <div>
+            <h3 align="left" itemprop="name">What are the properties of the tangent to the circle?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p align="left">Following are the properties of the tangent to the circle:<br />
+                  1) Radius of the circle is perpendicular to point of contact between the tangent and the circle.<br />
+                  2) Tangents drawn from an external point of the circle are of equal length.<br />
+                  3) Tangents drawn from an external point are equally inclined to the line segment joining the external point and centre of the circle.<br />
+                  4) Tangents drawn at the endpoints of the diameter of a circle are parallel to each other.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div align="left">Q4</div>
+          </div>
+          <div>
+            <h3 align="left" itemprop="name">What is a characteristic of a circle?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p align="left">A circle is a geometrical figure formed by the locus of points which are equidistant to a common point called the centre of the circle, and the constant distance from the centre is called the radius of the circle.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p align="left">&nbsp;</p>
+    <p align="left">&nbsp;</p></th>
+    <th width="487" valign="top" scope="col"><div align="center">
+      <p><img src="../image/banner1.png" alt="banner1" width="470" height="676" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/download (1).jpeg" alt="ftf" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/images (12).jpeg" alt="gfy" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/GEOMETRIC MOTION GRAPHIC ANIMATION.gif" alt="gif" width="400" height="225" /></p>
+    </div></th>
+  </tr>
+</table>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, values, and team.</p>
+          <a href="../ABOUT/About.html">Our History</a>
+          <a href="../ABOUT/About.html">Mission & Values</a>
+          <a href="../ABOUT/About.html">Meet the Team</a>        </div>
+
+      <div class="footer-column">
+            <h3>Quick Links</h3>
+          <a href="../ABOUT/About.html">Contact Us</a>
+          <a href="#faqs">FAQ</a>
+      </div>
+
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="../image/LOGOIMAGE.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>SUB-G4-About</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #003366, #009999);
+        color: #fff;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+        background: rgba(0, 0, 51, 0.7);
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #00cc99;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc99;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .welcome-section {
+        background: url('../image/welcome-bg.jpg') no-repeat center center/cover;
+        text-align: center;
+        padding: 100px 20px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: floatIn 2s ease-out forwards;
+    }
+
+    @keyframes floatIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .main-content {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background: rgba(0, 0, 51, 0.7);
+        border-radius: 10px;
+    }
+
+    .main-content h1 {
+        text-align: center;
+    }
+
+    .main-content p {
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .hover-image {
+        width: 421px; /* Reduced image size */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    .hover-image:hover {
+        transform: scale(2.05);
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+        filter: brightness(1.1);
+    }
+
+    .footer {
+        background: rgba(0, 0, 51, 0.7);
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #00cc99;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search-container button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        background-color: #00cc99;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover {
+        background-color: #009973;
+    }
+.hover-image1 {        width: 300px; /* Reduced image size */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.hover-image2 {        width: 421px; /* Reduced image size */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.hover-image3 {        width: 421px; /* Reduced image size */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.hover-image31 {width: 421px; /* Reduced image size */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../adjust.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-container">
+        <div class="logo">SUB-G4</div>
+      <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="About.html">About</a>
+            <div class="dropdown">
+                <a href="../Topic/Topic.html">Topic</a>
+                <div class="dropdown-content">
+                    <a href="../Topic/Topic.html">Introduction</a>
+                  	<a href="../Topic/circum.html"> Circumference of a circle</a>
+				    <a href="../Topic/radius.html"> Radius of a circle</a>
+                    <a href="../Topic/equations.html">Equations of a Circle</a>
+                                    </div>
+            </div>
+          <a href="../Aplication/apli.html">Applications</a>
+          <a href="../Resous/resos.html">Resources</a>
+          <a href="../Question & Answers/QAs.html">Questions & Answers</a>      </div>
+       
+    </div>
+</div>
+
+<div class="welcome-section">
+    <h1>Welcome to SUB-G4's Journey</h1>
+    <p>We are a passionate group dedicated to mathematics and technology, striving to make a difference.</p>
+</div>
+
+<div class="main-content">
+    <h1>History of Our Group at University of Education, Winneba</h1>
+  <p>In 2022, we embarked on our academic journey at the University of Education, Winneba, joining the Mathematics Department to pursue a Bachelor of Science in Mathematics Education. From the very beginning, our group was formed, starting as a close-knit team of six members: Eric Ohene Nannor, Patrick Fumey, Musah Atanga, Barnabas Nbamoandor Tegee, Bernard Alorgbey, and Abraham Gbormedoazio.</p>
+    <p>Later in our first year, during the second semester, we welcomed Charles Adu into our group. Together, we became more than just classmates; we were a family, united by our shared passion for mathematics and technology. We collaborated on numerous projects, which included:</p>
+    <ol>
+       <br> <li>Building an Application: Using Visual Studio, we developed our own software application, enhancing our coding and development skills.</li></br>
+       <br> <li>ICT Tools: We engaged with tools like GeoGebra for mathematical modeling and spreadsheets for data analysis.</li></br>
+        <br><li>Video Editing: We explored multimedia tools to produce and edit videos, a creative endeavor that broadened our technological expertise.</li></br>
+       <br> <li>Coding and Web Development: Our group mastered JavaScript for programming and HTML for building websites, laying a foundation for future tech endeavors.</li></br>
+    </ol>
+    <p>Despite being an all-male group, we celebrated diversity in thought and approach, recognizing that our different backgrounds and experiences only strengthened our collaboration. Each member contributed to the group’s success, and together, we created an inclusive atmosphere where everyone’s voice was heard. As we continue our journey, we remain committed to learning and growing as a team, excited for the challenges and opportunities ahead.</p>
+
+    <h1 style="margin-top: 40px;">Meet the Team</h1>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <p align="center" style="margin-top: 20px;"><img class="hover-image" src="../image/Slide4.jpg" alt="eric" /></p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p>
+        <center>
+          <img class="hover-image" src="../image/Slide5.jpg" alt="charels" /> <img class="hover-image" src="../image/Slide9.jpg" alt="Bana" />
+        </center>
+  </p>
+      <p>
+        <center>
+          <img class="hover-image" src="../image/Slide8.jpg" alt="AB" /> <img class="hover-image" src="../image/Slide7.jpg" alt="Ben" />
+        </center>
+      </p>
+      <p>
+        <center>
+          <img class="hover-image" src="../image/Slide6.jpg" alt="Musa" /> <img class="hover-image" src="../image/Slide10.jpg" alt="Bona" />
+        </center>
+      </p>
+    </blockquote>
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-nav">
+            <a href="About.html">About</a>
+            <a href="About.html">Contact Us</a>
+            <a href="About.html">History</a>        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

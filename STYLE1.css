@@ -1,0 +1,435 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed; /* Replace with your background image URL */
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+						   th {
+							background-color:#141E46;
+							color:#FFFFFF;
+}
+
+td {
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Search Bar Styles */
+#search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search-submit-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-submit-button:hover {
+    background-color: #2980b9;
+}
+
+/* Main Content Styles */
+h1, h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Resource Section Styles */
+.resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resource-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    color: #fff;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resource-card {
+        width: 100%;
+    }
+
+    #search-bar {
+        flex-direction: column;
+    }
+
+    .search-input-field {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-submit-button {
+        width: 100%;
+    }
+	
+	body {
+    background-color: #a3e4d7;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 51, 0.7); /* Header overlay effect */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #00cc99;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00cc99;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hover-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.faq-section {
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    padding-bottom: 30px; /* Add space between FAQs and footer */
+}
+
+#faq-form {
+    margin-top: 20px;
+}
+
+#user-question {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#faq-form label {
+    font-size: 20px; /* Increased size of the search engine label */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00cc99;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009977;
+}
+
+#faq-answer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: none;
+    text-align: left;
+}
+
+.footer {
+    background: rgba(0, 0, 51, 0.7); /* Footer background color */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #00cc99;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+  .chat-container {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            text-align: right;
+        }
+
+        .input-container {
+            display: flex;
+        }
+
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-container button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+
+.message-container {
+    position: relative;
+    margin: 190px;
+    width: 900px;
+    background-color:rgba(0, 0, 51, 0.7);
+    color:#FFF;
+    align-items: center;
+    text-align: justify;
+    font-weight:bolder;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 300px;
+	
+}
+
+.message {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    display: none;
+    font-size: 30px;
+    
+}
+
+#message-1 {
+    display: block;
+    top: 30%;
+    left: 17%;
+    text-align: center;
+}
+
+#message-2 {
+    top: 30%;
+}
+
+#message-3 {
+    text-align: center;
+    top: 30%;
+    left: 17%;
+}
+
+.btn1{
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 51, 0.7);
+    color: #000000;
+    border: 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn1:hover{
+    background-color:#0033CC;
+    color: gold;
+    transform: scale(1.05);
+    transition: 1.5s ease-in-out;
+}
+
+

@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/LOGOIMAGE.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>SUB-G4-Equations of a circle</title>
+<style>
+ .header {
+        position: fixed;
+        width: 100%;
+        background: rgba(0, 0, 51, 0.7); /* Header overlay effect */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #00cc99;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc99;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .hover-image {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+        background: rgba(0, 0, 51, 0.7); /* Footer background color */
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #00cc99;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+
+   
+</style>
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.hover-image1 {        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body {
+	background-color: #003366;
+}
+.style3 {color: #0000FF}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.style4 {color: #000066}
+.style5 {color: #0099FF}
+.style6 {color: #0000CC}
+.style7 {color: #000099}
+-->
+</style>
+</head>
+<center>
+<body onload="MM_preloadImages('../image/Introduction-to-Circles copy.jpg','../image/Area-of-a-circle copy.jpg','../image/All-about-circles copy.jpg','../image/Parts-of-circlecopy.jpg')">
+
+<div class="header">
+  <div class="header-container">
+        <div class="logo">SUB-G4</div>
+      <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../ABOUT/About.html">About</a>
+            <div class="dropdown">
+                <a href="Topic.html">Topic</a>
+                <div class="dropdown-content">
+                    <a href="Topic.html#INTRODUCTION">Introduction</a>
+                   <a href="circum.html"> Circumference of a circle</a>
+				    <a href="radius.html"> Radius of a circle</a>
+                    <a href="equations.html">Equations of a Circle</a>
+                                    </div>
+            </div>
+         <a href="../Aplication/apli.html">Applications</a>
+          <a href="../Resous/resos.html">Resources</a>
+          <a href="../Question &amp; Answers/QAs.html">Questions & Answers</a>        </div>
+    
+  </div>
+</div>
+<div style="margin-top: 110px;">
+<table width="110%" height="7133">  
+  <tr>
+    <th width="613" height="7122" scope="col"><section id="Introduction">
+      <div>
+        <h1 align="center" class="style7">EQUATIONS OF A CIRCLE</h1>
+      </div>
+      <div><a target="_blank"></a><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></div>
+      <p>The standard&nbsp;<strong>equation of a circle</strong>&nbsp;is given by:</p>
+      <p><strong>(x-h)</strong><strong>&sup2;</strong><strong>&nbsp;+ (y-k)</strong><strong>&sup2;</strong><strong>&nbsp;= r</strong><strong>&sup2;</strong></p>
+      <p>Where (h,k) is the coordinates of center of the circle and r is the radius.&nbsp;</p>
+      <p>Before deriving the equation of a circle, let us focus on what is a circle? A circle is a set of all points which are equally spaced from a fixed point in a plane. The fixed point is called the center of the circle. The distance between the center and any point on the circumference is called the<a href="radius.html">&nbsp;radius of the circle</a>. In this article, we are going to discuss what is an equation of a circle formula in standard form, and find the equation of a circle when the center is the origin and the center is not an origin with examples.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>Table of Contents:</strong>
+                <ul>
+                  <li><a href="#eqcircle">Equation of Circle</a>
+                      <ul>
+                        <li><a href="#origin">Centre at Origin</a></li>
+                        <li><a href="#norigin">Centre not at Origin</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#gform">General Form</a></li>
+                  <li><a href="#polar">Polar Equation</a></li>
+                  <li><a href="#find">How to Find the Equation?</a></li>
+                  <div id="eqcircle"></div>
+                  <li><a href="#try3">Practice / Try Questions</a></li>
+                  <li><a href="#faq3">FAQs</a></li> 
+                </ul></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="style4">What is the Equation of a Circle?</h2>
+      <p>A circle is a closed curve that is drawn from the fixed point called the center, in which all the points on the curve are having the same distance from the center point of the center.&nbsp;The equation of a circle with (h, k) center and r radius is given by:</p>
+      <p>(x-h)&sup2; + (y-k)&sup2; = r&sup2;</p>
+      <p>This is the standard form of the equation. Thus, if we know the coordinates of the center of the circle and its radius as well, we can easily find its equation.</p>
+      <p><strong>Example:</strong>&nbsp;Say point (1,2) is the center of the circle and radius is equal to 4 cm. Then the equation of this circle will be:</p>
+      <p>(x - 1)&sup2; + ( y- 2)&sup2; = 42</p>
+      <p>(x&sup2; &minus;2x + 1) + (y&sup2; &minus; 4y + 4) = 16</p>
+      <p>X&sup2; + y&sup2; &minus;2x&minus;4y-11 = 0&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <h3>Function or Not</h3>
+      <p>We know that there is a question that arises in case of circle whether being a function or not. It is clear that a circle is not a function. Because, a function is defined by each value in the domain is exactly associated with one point in the codomain, but a line that passes through the circle, intersects the line at two points on the surface.</p><div id="origin"></div>
+      <p>The mathematical way to describe the circle is an equation. Here, the equation of the circle is provided in all the forms such as general form, standard form along with examples.<br />
+      </p>
+      <h2 class="style5">Equation of a Circle When the Centre is Origin</h2>
+      <h1 class="style3"><img src="../image/Equation-Of-A-Circle-11.png" alt="asr" width="750" height="350" /></h1>
+      <p>Consider an arbitrary point&nbsp;<span id="MathJax-Element-1-Frame" tabindex="0"><span id="MathJax-Span-1"><span id="MathJax-Span-2"><span id="MathJax-Span-3">P</span><span id="MathJax-Span-4">(</span><span id="MathJax-Span-5">x</span><span id="MathJax-Span-6">,&nbsp;</span><span id="MathJax-Span-7">y</span><span id="MathJax-Span-8">)</span></span></span></span>&nbsp;on the circle. Let &lsquo;<span id="MathJax-Element-2-Frame" tabindex="0"><span id="MathJax-Span-9"><span id="MathJax-Span-10"><span id="MathJax-Span-11">a&rsquo;</span></span></span></span>&nbsp;be the radius of the circle which is equal to&nbsp;<span id="MathJax-Element-3-Frame" tabindex="0"><span id="MathJax-Span-12"><span id="MathJax-Span-13"><span id="MathJax-Span-14">O</span><span id="MathJax-Span-15">P</span></span></span></span>.</p>
+      <p>We know that the distance between the point&nbsp;<span id="MathJax-Element-4-Frame" tabindex="0"><span id="MathJax-Span-16"><span id="MathJax-Span-17"><span id="MathJax-Span-18">(</span><span id="MathJax-Span-19">x</span><span id="MathJax-Span-20">,&nbsp;</span><span id="MathJax-Span-21">y</span><span id="MathJax-Span-22">)</span></span></span></span>&nbsp;and origin&nbsp;<span id="MathJax-Element-5-Frame" tabindex="0"><span id="MathJax-Span-23"><span id="MathJax-Span-24"><span id="MathJax-Span-25">(</span><span id="MathJax-Span-26">0</span><span id="MathJax-Span-27">,</span><span id="MathJax-Span-28">0</span><span id="MathJax-Span-29">)</span></span></span></span>can be found using the&nbsp;<a href="https://byjus.com/the-distance-formula/">distance formula</a>&nbsp;which is equal to-</p>
+      <p>&radic;[<span id="MathJax-Span-33"><span id="MathJax-Span-34"><span id="MathJax-Span-35">x&sup2; </span></span><span id="MathJax-Span-39">+&nbsp;</span><span id="MathJax-Span-40"><span id="MathJax-Span-41">y<span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>] = a</p>
+      <p>Therefore, the equation of a circle, with the center as the origin is,</p>
+      <p><strong><span id="MathJax-Span-33"><span id="MathJax-Span-34"><span id="MathJax-Span-35">x&sup2; </span></span><span id="MathJax-Span-39">+</span><span id="MathJax-Span-40"><span id="MathJax-Span-41">y<span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span> = a<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></strong></p>
+      <p>Where &ldquo;a&rdquo; is the radius of the circle.</p>
+      <h3>Alternative Method</h3>
+      <p>Let us derive in another way. Suppose (x,y) is a point on a circle, and the center of the circle is at origin (0,0). Now if we draw a perpendicular from point (x,y) to the x-axis, then we get a right triangle, where radius of the circle is the hypotenuse. The base of the triangle is the distance along x-axis and height is the distance along the y-axis. Thus, by applying the Pythagoras theorem here, we get:</p><div id="norigin">
+	  </div>
+      <p><strong>x</strong><strong>&sup2; </strong><strong>+ y</strong><strong>&sup2;</strong><strong> = radius</strong><strong>&sup2;</strong><br />
+      </p>
+      <h2 class="style5">Equation of a Circle When the Centre is not an Origin</h2>
+      <div align="center"><img src="../image/Equation-Of-A-Circle-2.png" alt="frf" width="750" height="350" /></div>
+      <p>Let&nbsp;<span id="MathJax-Element-9-Frame" tabindex="0"><span id="MathJax-Span-85"><span id="MathJax-Span-86"><span id="MathJax-Span-87">C</span><span id="MathJax-Span-88">(</span><span id="MathJax-Span-89">h</span><span id="MathJax-Span-90">,&nbsp;</span><span id="MathJax-Span-91">k</span><span id="MathJax-Span-92">)</span></span></span></span>&nbsp;be the centre of the circle and&nbsp;<span id="MathJax-Element-10-Frame" tabindex="0"><span id="MathJax-Span-93"><span id="MathJax-Span-94"><span id="MathJax-Span-95">P</span><span id="MathJax-Span-96">(</span><span id="MathJax-Span-97">x</span><span id="MathJax-Span-98">,&nbsp;</span><span id="MathJax-Span-99">y</span><span id="MathJax-Span-100">)</span></span></span></span>&nbsp;be any point on the circle.</p>
+      <p>Therefore, the radius of a circle is CP.</p>
+      <p>By using distance formula,</p>
+      <p>(x-h)<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span>+ (y-k)<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>&nbsp;= CP<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2</span></span></span></span></span></p>
+      <p>Let radius be &lsquo;a&rsquo;.</p>
+      <p>Therefore, the equation of the circle with center&nbsp;(h, k)and the radius &lsquo;a&rsquo;&nbsp;is,</p>
+      <p><strong>(x-h)<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span>+ (y-k)<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>&nbsp;= a<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></strong></p>
+      <p>which is called the&nbsp;<strong>standard form for the equation of a circle.</strong><br /><div id="gform"></div>
+        <img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2 class="style4">General form of Equation of a Circle</h2>
+      <p>The general equation of any type of circle is represented by:</p>
+      <p><span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240">x<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span><span id="MathJax-Span-242">&nbsp;</span><span id="MathJax-Span-243">+</span><span id="MathJax-Span-244">&nbsp;</span><span id="MathJax-Span-245"><span id="MathJax-Span-246">y<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span><span id="MathJax-Span-248">&nbsp;</span><span id="MathJax-Span-249">+</span><span id="MathJax-Span-250">&nbsp;</span><span id="MathJax-Span-251">2</span><span id="MathJax-Span-252">g</span><span id="MathJax-Span-253">x</span><span id="MathJax-Span-254">&nbsp;</span><span id="MathJax-Span-255">+</span><span id="MathJax-Span-256">&nbsp;</span><span id="MathJax-Span-257">2</span><span id="MathJax-Span-258">f</span><span id="MathJax-Span-259">y</span><span id="MathJax-Span-260">&nbsp;</span><span id="MathJax-Span-261">+</span><span id="MathJax-Span-262">&nbsp;</span><span id="MathJax-Span-263">c</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-23-Frame" tabindex="0"><span id="MathJax-Span-264"><span id="MathJax-Span-265"><span id="MathJax-Span-266">0</span></span></span></span>, for all values of&nbsp;<span id="MathJax-Element-24-Frame" tabindex="0"><span id="MathJax-Span-267"><span id="MathJax-Span-268"><span id="MathJax-Span-269">g</span></span></span></span>,&nbsp;<span id="MathJax-Element-25-Frame" tabindex="0"><span id="MathJax-Span-270"><span id="MathJax-Span-271"><span id="MathJax-Span-272">f</span></span></span></span>&nbsp;and&nbsp;<span id="MathJax-Element-26-Frame" tabindex="0"><span id="MathJax-Span-273"><span id="MathJax-Span-274"><span id="MathJax-Span-275">c</span></span></span></span>.</p>
+      <p>Adding&nbsp;<span id="MathJax-Element-27-Frame" tabindex="0"><span id="MathJax-Span-276"><span id="MathJax-Span-277"><span id="MathJax-Span-278"><span id="MathJax-Span-279">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-281">&nbsp;</span><span id="MathJax-Span-282">+</span><span id="MathJax-Span-283">&nbsp;</span><span id="MathJax-Span-284"><span id="MathJax-Span-285">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>&nbsp;on both sides of the equation gives,</p>
+      <p><span id="MathJax-Element-28-Frame" tabindex="0"><span id="MathJax-Span-287"><span id="MathJax-Span-288"><span id="MathJax-Span-289"><span id="MathJax-Span-290">x<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-292">&nbsp;</span><span id="MathJax-Span-293">+</span><span id="MathJax-Span-294">&nbsp;</span>2<span id="MathJax-Span-296">g</span><span id="MathJax-Span-297">x</span><span id="MathJax-Span-298">&nbsp;</span><span id="MathJax-Span-299">+</span><span id="MathJax-Span-300">&nbsp;</span><span id="MathJax-Span-301"><span id="MathJax-Span-302">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; + &nbsp;</span><span id="MathJax-Span-307"><span id="MathJax-Span-308">y&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-310">&nbsp;</span><span id="MathJax-Span-311">+</span><span id="MathJax-Span-312">&nbsp;</span><span id="MathJax-Span-313">2</span><span id="MathJax-Span-314">f</span><span id="MathJax-Span-315">y</span><span id="MathJax-Span-316">&nbsp;</span><span id="MathJax-Span-317">+</span><span id="MathJax-Span-318">&nbsp;</span><span id="MathJax-Span-319"><span id="MathJax-Span-320">f&sup2; </span></span></span></span></span></span></span></span></span></span></span></span></span></span>=&nbsp;<span id="MathJax-Element-29-Frame" tabindex="0"><span id="MathJax-Span-322"><span id="MathJax-Span-323"><span id="MathJax-Span-324"><span id="MathJax-Span-325">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-327">&nbsp;</span><span id="MathJax-Span-328">+</span><span id="MathJax-Span-329">&nbsp;</span><span id="MathJax-Span-330"><span id="MathJax-Span-331">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-333">&nbsp;</span><span id="MathJax-Span-334">&minus;</span><span id="MathJax-Span-335">&nbsp;</span><span id="MathJax-Span-336">c</span></span></span></span>&nbsp;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;(1)</p>
+      <p>Since,&nbsp;<span id="MathJax-Element-30-Frame" tabindex="0"><span id="MathJax-Span-337"><span id="MathJax-Span-338"><span id="MathJax-Span-339">(</span><span id="MathJax-Span-340">x</span><span id="MathJax-Span-341">+</span><span id="MathJax-Span-342">g</span><span id="MathJax-Span-343"><span id="MathJax-Span-344">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-346"> =&nbsp;</span><span id="MathJax-Span-347"><span id="MathJax-Span-348">x<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-350"> +&nbsp;</span><span id="MathJax-Span-351">2</span><span id="MathJax-Span-352">g</span><span id="MathJax-Span-353">x&nbsp;</span><span id="MathJax-Span-354">+&nbsp;</span><span id="MathJax-Span-355"><span id="MathJax-Span-356">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>&nbsp;and&nbsp;<span id="MathJax-Element-31-Frame" tabindex="0"><span id="MathJax-Span-358"><span id="MathJax-Span-359"><span id="MathJax-Span-360">(</span><span id="MathJax-Span-361">y</span><span id="MathJax-Span-362">+</span><span id="MathJax-Span-363">f</span><span id="MathJax-Span-364"><span id="MathJax-Span-365">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-367">=</span><span id="MathJax-Span-368"><span id="MathJax-Span-369">y<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-371">+&nbsp;</span><span id="MathJax-Span-372">2</span><span id="MathJax-Span-373">f</span><span id="MathJax-Span-374">y&nbsp;</span><span id="MathJax-Span-375">+&nbsp;</span><span id="MathJax-Span-376"><span id="MathJax-Span-377">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>&nbsp;substituting the values in equation (1), we have</p>
+      <p><span id="MathJax-Element-32-Frame" tabindex="0"><span id="MathJax-Span-379"><span id="MathJax-Span-380"><span id="MathJax-Span-381">(</span><span id="MathJax-Span-382">x</span><span id="MathJax-Span-383">+</span><span id="MathJax-Span-384">g</span><span id="MathJax-Span-385"><span id="MathJax-Span-386">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-388">+&nbsp;</span><span id="MathJax-Span-389">(</span><span id="MathJax-Span-390">y</span><span id="MathJax-Span-391">+</span><span id="MathJax-Span-392">f</span><span id="MathJax-Span-393"><span id="MathJax-Span-394">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-396">=&nbsp;</span><span id="MathJax-Span-397"><span id="MathJax-Span-398">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-400"> +&nbsp;</span><span id="MathJax-Span-401"><span id="MathJax-Span-402">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-404">&minus;</span><span id="MathJax-Span-405">c</span></span></span></span>&nbsp;&hellip;&hellip;&hellip;&hellip;&hellip;.(2)</p>
+      <p>Comparing (2) with&nbsp;<span id="MathJax-Element-33-Frame" tabindex="0"><span id="MathJax-Span-406"><span id="MathJax-Span-407"><span id="MathJax-Span-408">(</span><span id="MathJax-Span-409">x</span><span id="MathJax-Span-410">&minus;</span><span id="MathJax-Span-411">h</span><span id="MathJax-Span-412"><span id="MathJax-Span-413">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-415">+&nbsp;</span><span id="MathJax-Span-416">(</span><span id="MathJax-Span-417">y</span><span id="MathJax-Span-418">&minus;</span><span id="MathJax-Span-419">k</span><span id="MathJax-Span-420"><span id="MathJax-Span-421">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-423">=&nbsp;</span><span id="MathJax-Span-424"><span id="MathJax-Span-425">a<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>, where&nbsp;<span id="MathJax-Element-34-Frame" tabindex="0"><span id="MathJax-Span-427"><span id="MathJax-Span-428"><span id="MathJax-Span-429">(</span><span id="MathJax-Span-430">h</span><span id="MathJax-Span-431">,&nbsp;</span><span id="MathJax-Span-432">k</span><span id="MathJax-Span-433">)</span></span></span></span>&nbsp;is the center and &lsquo;<span id="MathJax-Element-35-Frame" tabindex="0"><span id="MathJax-Span-434"><span id="MathJax-Span-435"><span id="MathJax-Span-436">a&rsquo;</span></span></span></span>&nbsp;is the radius of the circle.</p>
+      <p><span id="MathJax-Element-36-Frame" tabindex="0"><span id="MathJax-Span-437"><span id="MathJax-Span-438"><span id="MathJax-Span-439">h</span><span id="MathJax-Span-440">=</span><span id="MathJax-Span-441">&minus;</span><span id="MathJax-Span-442">g</span></span></span></span>,&nbsp;<span id="MathJax-Element-37-Frame" tabindex="0"><span id="MathJax-Span-443"><span id="MathJax-Span-444"><span id="MathJax-Span-445">k</span><span id="MathJax-Span-446">=</span><span id="MathJax-Span-447">&minus;</span><span id="MathJax-Span-448">f</span></span></span></span></p>
+      <p><span id="MathJax-Element-38-Frame" tabindex="0"><span id="MathJax-Span-449"><span id="MathJax-Span-450"><span id="MathJax-Span-451">a<span id="MathJax-Span-453"><span id="MathJax-Span-454"><span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span>&nbsp;</span><span id="MathJax-Span-452">=&nbsp;</span><span id="MathJax-Span-453"><span id="MathJax-Span-454">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-458"> +&nbsp;</span><span id="MathJax-Span-459"><span id="MathJax-Span-460">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-464">&minus;</span><span id="MathJax-Span-465">c</span></span></span></span></p>
+      <p>Therefore,</p>
+      <p><span id="MathJax-Element-39-Frame" tabindex="0"><span id="MathJax-Span-466"><span id="MathJax-Span-467"><span id="MathJax-Span-468"><span id="MathJax-Span-469">x<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-471">+&nbsp;</span><span id="MathJax-Span-472"><span id="MathJax-Span-473">y<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-475"> +&nbsp;</span><span id="MathJax-Span-476">2</span><span id="MathJax-Span-477">g</span><span id="MathJax-Span-478">x&nbsp;</span><span id="MathJax-Span-479">+&nbsp;</span><span id="MathJax-Span-480">2</span><span id="MathJax-Span-481">f</span><span id="MathJax-Span-482">y&nbsp;</span><span id="MathJax-Span-483">+&nbsp;</span><span id="MathJax-Span-484">c</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-40-Frame" tabindex="0"><span id="MathJax-Span-485"><span id="MathJax-Span-486"><span id="MathJax-Span-487">0</span></span></span></span>, represents the circle with centre&nbsp;<span id="MathJax-Element-41-Frame" tabindex="0"><span id="MathJax-Span-488"><span id="MathJax-Span-489"><span id="MathJax-Span-490">(</span><span id="MathJax-Span-491">&minus;</span><span id="MathJax-Span-492">g</span><span id="MathJax-Span-493">,</span><span id="MathJax-Span-494">&minus;</span><span id="MathJax-Span-495">f</span><span id="MathJax-Span-496">)</span></span></span></span>&nbsp;and radius equal to&nbsp;<span id="MathJax-Element-42-Frame" tabindex="0"><span id="MathJax-Span-497"><span id="MathJax-Span-498"><span id="MathJax-Span-499">a&sup2;&nbsp;</span><span id="MathJax-Span-500">=&nbsp;</span><span id="MathJax-Span-501"><span id="MathJax-Span-502">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-506"> +&nbsp;</span><span id="MathJax-Span-507"><span id="MathJax-Span-508">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-512">&minus;&nbsp;</span><span id="MathJax-Span-513">c</span></span></span></span>.</p>
+      <ul>
+        <li>If&nbsp;<span id="MathJax-Element-43-Frame" tabindex="0"><span id="MathJax-Span-514"><span id="MathJax-Span-515"><span id="MathJax-Span-516"><span id="MathJax-Span-517">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-519"> +&nbsp;</span><span id="MathJax-Span-520"><span id="MathJax-Span-521">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-523"> &gt;&nbsp;</span><span id="MathJax-Span-524">c</span></span></span></span>, then the radius of the circle is real.</li>
+        <li>If&nbsp;<span id="MathJax-Element-44-Frame" tabindex="0"><span id="MathJax-Span-525"><span id="MathJax-Span-526"><span id="MathJax-Span-527"><span id="MathJax-Span-528">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-530"> +&nbsp;</span><span id="MathJax-Span-531"><span id="MathJax-Span-532">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-534"> =&nbsp;</span><span id="MathJax-Span-535">c</span></span></span></span>, then the radius of the circle is zero which tells us that the circle is a point that coincides with the center. Such a type of circle is called a point circle</li>
+        <li><span id="MathJax-Element-45-Frame" tabindex="0"><span id="MathJax-Span-536"><span id="MathJax-Span-537"><span id="MathJax-Span-538"><span id="MathJax-Span-539">g<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-541">+&nbsp;</span><span id="MathJax-Span-542"><span id="MathJax-Span-543">f<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-545">&lt;</span><span id="MathJax-Span-546">c</span></span></span></span>, then the radius of the circle become imaginary. Therefore, it is a circle having a real center and imaginary radius.</li>
+        <div id="polar"></div>
+      </ul>
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2 class="style3">Polar Equation of a Circle</h2>
+      <p>To find the polar form of equation of a circle, replace the value of x = r cos &theta; and y = r sin&nbsp;&theta;, in x&sup2; + y&sup2;= a&sup2;.</p>
+      <p>Hence,&nbsp; we get;</p>
+      <p>(r cos &theta;)&sup2;+ (r sin &theta;)&sup2;= a&sup2;</p>
+      <p>r&sup2;cos&sup2; &theta; + r&sup2; sin&sup2; &theta; = a&sup2;</p>
+      <p>r&sup2; (cos&sup2;&theta; + sin&sup2;&theta;) = a&sup2;</p>
+      <p>r&sup2; (1) = a&sup2; &nbsp;[Using trigonometry identity]</p>
+      <p>r = a</p>
+      <p>is the polar equation of a circle with radius a and center at the origin (0,0).</p>
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h1 align="left" class="style3">Video Lessons on Circle</h1>
+      <table width="98%" height="579">
+        <tr>
+          <th width="49%" height="269" valign="top" scope="col"><h3 align="center">Introduction to Circles
+              <br />
+              <a href="https://youtu.be/m9dpeG2rKdY" class="hover-image1"><img src="../image/Introduction-to-Circles.jpg" alt="intro" width="291" height="213" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../image/Introduction-to-Circles copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></h3>          </th>
+          <th width="51%" valign="top" scope="col"><h3 align="center">Parts of a Circle<br />
+              <a href="https://youtu.be/DeRWtRwXrT4" onmouseover="MM_swapImage('Image2','','../image/Parts-of-circlecopy.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../image/Parts-of-circle.jpg" alt="pat" width="291" height="213" border="0" /></a></h3>          </th>
+        </tr>
+        <tr>
+          <th height="302" valign="top" scope="row"><h3 align="center">Area of a Circle<br />
+              <a href="https://youtu.be/HE12r4vCwII"><img src="../image/Area-of-a-circle.jpg" alt="area" width="291" height="213" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','../image/Area-of-a-circle copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a></h3>          </th>
+          <td valign="top"><h3 align="center">All about Circles<br />
+                <a href="https://youtu.be/CTDtiXHorgc"><img src="../image/All-about-circles.jpg" alt="all" width="291" height="213" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','../image/All-about-circles copy.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><br />
+          </h3>          </td>
+        </tr>
+      </table>
+      <h2 align="center" class="style6">Other Circle Formulas</h2>
+      <p>Here are some formulas are given for circle in terms of radius.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>Diameter</td>
+            <td>2 x radius</td>
+          </tr>
+          <tr>
+            <td>Circumference</td>
+            <td>2&pi; (radius)</td>
+          </tr>
+          <tr>
+            <td>Area</td>
+            <td>&pi;(radius)&sup2;</td>
+          </tr>
+        </tbody>
+      </table><div id="find"></div>
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2 class="style4">How to Find the Equation of the Circle?</h2>
+      <p>To find the equation of a circle given the radius and center of the circle, we can directly put the values in the standard form of the equation.</p>
+      <p><strong>(x-h)</strong><strong>&sup2;</strong><strong>&nbsp;+ (y-k)</strong>&sup2;<strong></strong><strong>= r</strong><strong>&sup2;</strong></p>
+      <p>Here, some solved problems are given to find the equation of a circle in both cases such as when the center of a circle is origin and center is not an origin is given below.<br />
+      </p>
+      <h3 class="style3">Solved Examples</h3>
+      <p><strong>Example 1:</strong></p>
+      <p>Consider a circle whose center is at the origin and radius is equal to 8 units.</p>
+      <p><strong>Solution:</strong></p>
+      <p>Given: Centre is (0, 0), radius is 8 units.</p>
+      <p>We know that the equation of a circle when the center is origin:</p>
+      <p><strong><span id="MathJax-Span-33"><span id="MathJax-Span-34"><span id="MathJax-Span-35">x&sup2;</span></span><span id="MathJax-Span-39">+&nbsp;</span><span id="MathJax-Span-40"><span id="MathJax-Span-41">y<span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>= a<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></strong></p>
+      <p>For the given condition, the equation of a circle is given as</p>
+      <p><span id="MathJax-Span-33"><span id="MathJax-Span-34"><span id="MathJax-Span-35">x&sup2;</span></span><span id="MathJax-Span-39">+&nbsp;</span><span id="MathJax-Span-40"><span id="MathJax-Span-41">y<span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>= 8<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2</span></span></span></span></span></p>
+      <p><span id="MathJax-Span-33"><span id="MathJax-Span-34"><span id="MathJax-Span-35">x&sup2;</span></span><span id="MathJax-Span-39"> +&nbsp;</span><span id="MathJax-Span-40"><span id="MathJax-Span-41">y<span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2; </span></span></span></span></span>= 64, which is the equation of a circle</p>
+      <p><strong>Example 2:</strong></p>
+      <p>Find the equation of the circle whose center is&nbsp;(3,5)&nbsp;and the radius is 4 units.</p>
+      <p><strong>Solution:</strong></p>
+      <p>Here, the center of the circle is not an origin.</p>
+      <p>Therefore, the general equation of the circle is,</p>
+      <p>(x-3)<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>+ (y-5)&sup2;=&nbsp;4<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2</span></span></span></span></span></p>
+      <p>x<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>&ndash; 6x + 9 + y<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>-10y +25&nbsp;=&nbsp;16</p>
+      <p>x<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>+y<span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span>-6x -10y + 18&nbsp;=0</p>
+      <p><strong>Example 3:</strong></p>
+      <p>Equation of a circle is&nbsp;<span id="MathJax-Span-548"><span id="MathJax-Span-549"><span id="MathJax-Span-550">x<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-552">+</span><span id="MathJax-Span-553"><span id="MathJax-Span-554">y<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-556">&minus;</span><span id="MathJax-Span-557">12</span><span id="MathJax-Span-558">x</span><span id="MathJax-Span-559">&minus;</span><span id="MathJax-Span-560">16</span><span id="MathJax-Span-561">y</span><span id="MathJax-Span-562">+</span><span id="MathJax-Span-563">19</span><span id="MathJax-Span-564">=</span><span id="MathJax-Span-565">0</span></span>. Find the center and radius of the circle.</p>
+      <p><strong>Solution:</strong></p>
+      <p>Given equation is of the form&nbsp;<span id="MathJax-Element-47-Frame" tabindex="0"><span id="MathJax-Span-566"><span id="MathJax-Span-567"><span id="MathJax-Span-568"><span id="MathJax-Span-569">x<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-572">+</span><span id="MathJax-Span-573">&nbsp;</span><span id="MathJax-Span-574"><span id="MathJax-Span-575">y<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-577">&sup2;</span><span id="MathJax-Span-578">+</span><span id="MathJax-Span-579">&nbsp;</span><span id="MathJax-Span-580">2</span><span id="MathJax-Span-581">g</span><span id="MathJax-Span-582">x</span><span id="MathJax-Span-583">&nbsp;</span><span id="MathJax-Span-584">+</span><span id="MathJax-Span-585">&nbsp;</span><span id="MathJax-Span-586">2</span><span id="MathJax-Span-587">f</span><span id="MathJax-Span-588">y</span><span id="MathJax-Span-589">&nbsp;</span><span id="MathJax-Span-590">+</span><span id="MathJax-Span-591">&nbsp;</span><span id="MathJax-Span-592">c</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-48-Frame" tabindex="0"><span id="MathJax-Span-593"><span id="MathJax-Span-594"><span id="MathJax-Span-595">0</span></span></span></span>,</p>
+      <p><span id="MathJax-Element-49-Frame" tabindex="0"><span id="MathJax-Span-596"><span id="MathJax-Span-597"><span id="MathJax-Span-598">2</span><span id="MathJax-Span-599">g</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-50-Frame" tabindex="0"><span id="MathJax-Span-600"><span id="MathJax-Span-601"><span id="MathJax-Span-602">&minus;</span><span id="MathJax-Span-603">12</span></span></span></span>,&nbsp;<span id="MathJax-Element-51-Frame" tabindex="0"><span id="MathJax-Span-604"><span id="MathJax-Span-605"><span id="MathJax-Span-606">2</span><span id="MathJax-Span-607">f</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-52-Frame" tabindex="0"><span id="MathJax-Span-608"><span id="MathJax-Span-609"><span id="MathJax-Span-610">&minus;</span><span id="MathJax-Span-611">16</span></span></span></span>,<span id="MathJax-Element-53-Frame" tabindex="0"><span id="MathJax-Span-612"><span id="MathJax-Span-613"><span id="MathJax-Span-614">c</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-54-Frame" tabindex="0"><span id="MathJax-Span-615"><span id="MathJax-Span-616"><span id="MathJax-Span-617">19</span></span></span></span></p>
+      <p><span id="MathJax-Element-55-Frame" tabindex="0"><span id="MathJax-Span-618"><span id="MathJax-Span-619"><span id="MathJax-Span-620">g</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-56-Frame" tabindex="0"><span id="MathJax-Span-621"><span id="MathJax-Span-622"><span id="MathJax-Span-623">&minus;</span><span id="MathJax-Span-624">6</span></span></span></span>,<span id="MathJax-Element-57-Frame" tabindex="0"><span id="MathJax-Span-625"><span id="MathJax-Span-626"><span id="MathJax-Span-627">f</span></span></span></span>&nbsp;=&nbsp;<span id="MathJax-Element-58-Frame" tabindex="0"><span id="MathJax-Span-628"><span id="MathJax-Span-629"><span id="MathJax-Span-630">&minus;</span><span id="MathJax-Span-631">8</span></span></span></span></p>
+      <p>Centre of the circle is&nbsp;<span id="MathJax-Element-59-Frame" tabindex="0"><span id="MathJax-Span-632"><span id="MathJax-Span-633"><span id="MathJax-Span-634">(</span><span id="MathJax-Span-635">6</span><span id="MathJax-Span-636">,</span><span id="MathJax-Span-637">8</span><span id="MathJax-Span-638">)</span></span></span></span></p>
+      <p>Radius of the circle =&nbsp;<span id="MathJax-Element-60-Frame" tabindex="0"><span id="MathJax-Span-639"><span id="MathJax-Span-640"><span id="MathJax-Span-641"><span id="MathJax-Span-642"><span id="MathJax-Span-643">&radic;[</span></span></span><span id="MathJax-Span-644"><span id="MathJax-Span-645"><span id="MathJax-Span-646">(</span><span id="MathJax-Span-647">&minus;</span><span id="MathJax-Span-648">6</span><span id="MathJax-Span-649"><span id="MathJax-Span-650">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">2</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-652">&sup2; </span><span id="MathJax-Span-653">+</span><span id="MathJax-Span-654">&nbsp;</span><span id="MathJax-Span-655">(</span><span id="MathJax-Span-656">&minus;</span><span id="MathJax-Span-657">8</span><span id="MathJax-Span-658"><span id="MathJax-Span-659">)<span id="MathJax-Element-22-Frame" tabindex="0"><span id="MathJax-Span-237"><span id="MathJax-Span-238"><span id="MathJax-Span-239"><span id="MathJax-Span-240"><span id="MathJax-Span-33"><span id="MathJax-Span-40"><span id="MathJax-Span-41"><span id="MathJax-Span-34"><span id="MathJax-Span-35">&sup2;</span></span></span></span></span></span></span></span></span></span></span></span><span id="MathJax-Span-661">&nbsp;</span><span id="MathJax-Span-662">&minus;</span><span id="MathJax-Span-663">&nbsp;</span><span id="MathJax-Span-664">19</span></span></span></span></span></span>&nbsp;]=&nbsp;<span id="MathJax-Element-61-Frame" tabindex="0"><span id="MathJax-Span-665"><span id="MathJax-Span-666"><span id="MathJax-Span-667"><span id="MathJax-Span-668"><span id="MathJax-Span-669">&radic;[</span></span></span><span id="MathJax-Span-670"><span id="MathJax-Span-671"><span id="MathJax-Span-672">100</span><span id="MathJax-Span-673">&nbsp;</span><span id="MathJax-Span-674">&minus;</span><span id="MathJax-Span-675">&nbsp;</span><span id="MathJax-Span-676">19]</span></span></span></span></span></span>&nbsp;=</p>
+      <p>=&nbsp;&nbsp;<span id="MathJax-Element-60-Frame" tabindex="0"><span id="MathJax-Span-639"><span id="MathJax-Span-640"><span id="MathJax-Span-641"><span id="MathJax-Span-642"><span id="MathJax-Span-643">&radic;81 =&nbsp;</span></span></span></span></span></span><span id="MathJax-Element-62-Frame" tabindex="0"><span id="MathJax-Span-677"><span id="MathJax-Span-678"><span id="MathJax-Span-679">9</span></span></span></span>&nbsp;units.</p><div id="try3"></div>
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+      <h2>Practice Questions on Equation of Circle</h2>
+      <ol>
+        <li>Find the equation of a circle of radius 5 units, whose centre lies on the x-axis and which passes through the point (2, 3).</li>
+        <li>Find the equation of a circle with the centre (h, k) and touching the x-axis.</li>
+        <li>Show that the equation x&sup2;+ y&sup2;&ndash; 6x + 4y &ndash; 36 = 0 represents a circle. Also, find the centre and radius of the circle.</li><div id="faq3"></div>
+      </ol>
+      <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /><br />
+        <br />
+      </p>
+      <div id="Frequently-Asked-Questions-on-Equation-of-a-Circle">
+        <h2 align="center" class="style3">Frequently Asked Questions on Equation of a Circle</h2>
+        <div>
+          <div itemscope="" itemtype="https://schema.org/FAQPage">
+            <div>Q1</div>
+            <div>
+              <h3 itemprop="name">What is the equation for a circle?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">The equation for a circle is given by:<br />
+                  (x-h)&sup2; + (y-k)&sup2; = a&sup2;<br />
+                  Where (h,k) is the center and a is the radius of the circle.</div>
+              </div>
+            </div>
+            <div>Q2</div>
+            <div>
+              <h3 itemprop="name">What are the formulas for circles?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">The circumference of a circle is equal to 2 (pi) of radius or pi of diameter.<br />
+                  The area of a circle is equal to the pi of radius-squared.</div>
+              </div>
+            </div>
+            <div>Q3</div>
+            <div>
+              <h3 itemprop="name">What is the equation of a circle when the center is at the origin?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">At origin, the value of coordinates is (0,0), therefore, the equation of circle becomes:<br />
+                  (x-0)&sup2;+ (y-0)&sup2;= r&sup2;<br />
+                  x&sup2; + y&sup2; = r&sup2;</div>
+              </div>
+            </div>
+            <div>Q4</div>
+            <div>
+              <h3 itemprop="name">If (x-4)&sup2; +(y+7)&sup2;=9 is the equation of circle, then what is the center of circle?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">Given, (x-4)&sup2;+(y+7)&sup2;=9 is the equation of circle. If we compare this equation with the standard equation we get:<br />
+                  (x-h)&sup2;+(y-k)&sup2;= a&sup2;<br />
+                  h=4 and y = -7<br />
+                  Therefore, (4,-7) is the center of circle</div>
+              </div>
+            </div>
+            <div>Q5</div>
+            <div>
+              <h3 itemprop="name">How do we know if an equation is the equation of circle?</h3>
+              <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <div itemprop="text">If x and y are squared and the coefficient of x2&nbsp;and y2&nbsp;are same, then it is equation of circle. For example, 3x&sup2; +3y&sup2; = 12 is a circle&rsquo;s equation.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <div id="interactive-quiz-ias-section">
+      <div id="interactive-quiz-ias" data-interactive-quiz-name="SinglePageQuiz">
+      <div id="interactive-quiz-header-ias">
+      <br />
+      <h2 class="style3">&nbsp;</h2>    </th>
+    <th width="487" valign="top" scope="col"><div align="center">
+      <p><img src="../image/banner.png" alt="banner" width="470" height="676" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/download (1).jpeg" alt="ftf" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/images (12).jpeg" alt="gfy" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/GEOMETRIC MOTION GRAPHIC ANIMATION.gif" alt="gif" width="400" height="225" /></p>
+    </div></th>
+  </tr>
+</table>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, values, and team.</p>
+          <a href="../ABOUT/About.html">Our History</a>
+          <a href="../ABOUT/About.html">Mission & Values</a>
+          <a href="../ABOUT/About.html">Meet the Team</a>        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="../ABOUT/About.html">Contact Us</a>
+      <a href="#faq3">FAQ</a></div>
+
+      <div class="footer-column"></div>
+    </div>
+  </div>
+</body></center>
+</html>
+

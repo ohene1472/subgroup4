@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../image/LOGOIMAGE.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>SUB-G4-Circumference of a circle</title>
+
+<style>
+ .header {
+        position: fixed;
+        width: 100%;
+        background: rgba(0, 0, 51, 0.7); /* Header overlay effect */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #00cc99;
+        border-radius: 5px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc99;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color:#FFFFFF;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .hover-image {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+        background: rgba(0, 0, 51, 0.7); /* Footer background color */
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #00cc99;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search-container button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        background-color: #00cc99;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+	.a {text-decoration:none;
+	}
+	
+    .search-container button:hover {
+        background-color: #009973;
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.hover-image1 {        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body {
+	background-color: #003366;
+}
+.style3 {color: #0000FF}
+.style5 {
+	color: #000099;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style6 {
+	color: #000066;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style7 {color: #0000FF; font-family: Georgia, "Times New Roman", Times, serif; }
+.style8 {font-family: Georgia, "Times New Roman", Times, serif}
+.style9 {color: #000099; }
+</style>
+<link rel="stylesheet" type="text/css" href="Topic.css">
+<style type="text/css">
+<!--
+.style10 {color: #0000CC; }
+-->
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="header-container">
+        <div class="logo">SUB-G4</div>
+    <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../ABOUT/About.html">About</a>
+            <div class="dropdown">
+                <a href="Topic.html">Topic</a>
+                <div class="dropdown-content">
+                    <a href="Topic.html">Introduction</a>
+                    <a href="circum.html"> Circumference of a circle</a>
+				    <a href="radius.html"> Radius of a circle</a>
+                    <a href="equations.html">Equations of a Circle</a>
+              </div>
+            </div>
+       <a href="../Aplication/apli.html">Applications</a>
+        <a href="../Resous/resos.html">Resources</a>
+        <a href="../Question &amp; Answers/QAs.html">Questions & Answers</a>      </div>
+   
+  </div>
+</div>
+<div style="margin-top:110px;">
+	<table width="94%" height="100%">
+	  <tr>
+		<th width="509" valign="top" scope="col">
+		<div id="meaning">
+		  <h1 align="center"><span class="style10">CIRCUMFERECE OF A CIRCLE </span></h1>
+		  <p><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></p>
+		</div>
+		<p class="style8">In Mathematics, the circumference of any shape defines the path or the boundary that surrounds the shape. In other words, the circumference is also called the perimeter, which helps to identify the length of the outline of any shape.&nbsp;As we know, the&nbsp;<strong>perimeter and area of circle&nbsp;</strong>are the two important parameters of a circle.&nbsp;In this article, we will discuss the &ldquo;<strong>Circumference of a circle</strong>&rdquo; or &ldquo;<strong>Perimeter of circle</strong>&rdquo; with its definition, formula, methods to find the circle&rsquo;s circumference with many solved examples.</p>
+		  <p class="style8"><strong>Table of Contents:</strong></p>
+      <ul class="style8">
+        <li><a href="#meaning">Circumference Meaning</a></li>
+        <li><a href="#fomula">Formulas</a></li>
+        <li><a href="#circum" target="_self">What is the Circumference of a Circle?</a></li>
+        <li><a href="#method">Methods to Find the Circumference</a></li>
+        <li><a href="#solved1">Solved Problems</a></li>
+        <li><a href="#try1">Practice Problems</a></li>
+        <li><a href="#faqs1">FAQs</a></li>
+      </ul>
+      <p class="style8"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></p>
+      <h2 class="style6">Circle&rsquo;s Circumference</h2>
+      <p class="style8"><strong>Circumference of the circle or perimeter of the circle</strong>&nbsp;is the measurement of the boundary of the circle. Whereas the&nbsp;area of circle&nbsp;defines the region occupied by it.&nbsp; If we open a circle and make a straight line out of it, then its length is the circumference. It is usually measured in units, such as cm or unit m.</p>
+      <p class="style8">When we use the formula to calculate the circumference of the circle, then the&nbsp;<a href="radius.html">radius of the circle</a>&nbsp;is taken into account. Hence, we need to know the value of the radius or the diameter to evaluate the perimeter of the circle.<br />
+	  <div id="fomula"></div>
+        <span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></p>
+      <h2 class="style7">Circumference of a Circle Formula</h2>
+      <p class="style8">The&nbsp;<strong>Circumference (or)&nbsp;perimeter of circle = 2&pi;R</strong></p>
+      <p class="style8">where,</p>
+      <p class="style8">R is the radius of the circle</p>
+      <p class="style8">&pi; is the mathematical constant with an approximate (up to two decimal points) value of 3.14</p>
+      <p class="style8">Again,</p>
+      <p class="style8">Pi (&pi;) is a special mathematical constant; it is the ratio of circumference to diameter of any circle.</p>
+      <p class="style8">where<strong>&nbsp;C = &pi; D</strong></p>
+      <p class="style8">C is the circumference of the circle</p>
+      <p class="style8">D is the diameter of the circle</p>
+      <p class="style8"><strong>For example:</strong>&nbsp;If the radius of the circle is 4cm then find its circumference.</p>
+      <p class="style8">Given: Radius = 4cm</p>
+      <p class="style8">Circumference = 2&pi;r</p>
+      <p class="style8">= 2 x 3.14 x 4</p>
+      <p class="style8">= 25.12 cm</p>
+      <p class="style8">&nbsp;</p>
+      <h3 class="style8">Area of a Circle Formula</h3>
+      <p class="style8">Area of any circle is the region enclosed by the circle itself or the space covered by the circle. The formula to find the area of the circle is;</p>
+      <p class="style8"><strong>A =&nbsp;&pi;r2</strong></p>
+      <p class="style8">Where r is the radius of the circle, this formula is applicable to all the circles with different radii.</p>
+      <h2 class="style8"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></h2>
+      <h2 class="style8">Perimeter of Semi-Circle</h2>
+      <p class="style8">The semi-circle is formed when we divide the circle into two equal parts. Therefore, the perimeter of the semi-circle also becomes half.</p>
+      <p class="style8">Hence,&nbsp;<strong>Perimeter =&nbsp;&pi;r +2r</strong></p>
+      <h2 class="style8">Area of Semi-Circle</h2>
+      <p class="style8">Area of the semi-circle is the region occupied by a semi-circle in a 2D plane. The area of the semi-circle is equal to half of the area of a circle, whose radii are equal.</p>
+      <p class="style8">Therefore,&nbsp;<strong>Area = &pi;r&sup2;/2</strong></p>
+      <p class="style8">Thus, we can define three different formulas to find the perimeter of circle (i.e. circumference of a circle).</p>
+      <p class="style8"><strong>Formula 1:</strong>&nbsp;When the radius of a circle is known.</p>
+      <p class="style8">Circumference of a circle = 2&pi;r</p>
+      <p class="style8"><strong>Formula 2:&nbsp;</strong>When the diameter of a circle is known.</p>
+      <p class="style8">Circumference = &pi;d</p>
+      <p class="style8"><strong>Formula 3:&nbsp;</strong>When the area of a circle is known, we can write the formula to find the perimeter of the circle as:</p>
+      <p class="style8">C = &radic;(4&pi;A)</p>
+      <p class="style8">Here,</p>
+      <p class="style8">C = Circumference of the circle</p>
+      <p class="style8">A = Area of the circle</p>
+      <p class="style8"><strong>Summary</strong></p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="style8">Circumference of Circle</td>
+            <td class="style8">2&pi;r</td>
+          </tr>
+          <tr>
+            <td class="style8">Area of circle</td>
+            <td class="style8">&pi;r2</td>
+          </tr>
+          <tr>
+            <td class="style8">Perimeter of semi-circle</td>
+            <td class="style8">&pi;r + 2r</td>
+          </tr>
+          <tr>
+            <td class="style8">Area of semi-circle</td>
+            <td class="style8">&pi;r&sup2;/2</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="style8">Radius of a Circle</h3>
+      <p class="style8">The distance from the centre to the outer line of the circle is called a radius. It is the most important quantity of the circle based on which formulas for the area and circumference of the circle are derived. Twice the radius of a circle is called the diameter of the circle. The diameter cuts the circle into two equal parts, which is called a semi-circle.      </p>
+	  <div id="circum"></div>
+      <p class="style8"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></p>
+      <h2 class="style5">What is the Circumference of Circle?</h2>
+      <p class="style8">The&nbsp;meaning of&nbsp;circumference is the distance around a circle or any curved geometrical shape.&nbsp;It is the one-dimensional linear measurement of the boundary across any two-dimensional circular surface. It follows the same principle behind finding the perimeter of any polygon, which is why calculating the circumference of a circle&nbsp;is also known as the&nbsp;<strong>perimeter&nbsp;of a circle.</strong></p>
+      <p class="style8">A circle is defined as a shape with all the points are equidistant from a point at the centre. The circle depicted below has its centre lies at point A.</p>
+      <p class="style8">The&nbsp;<strong>value of pi is approximately 3.1415926535897</strong>&hellip; and we use a Greek letter &pi; (pronounced as Pi) to describe this number. The value<strong>&nbsp;&pi;&nbsp;</strong>is a non-terminating value.</p>
+      <p class="style8">For circle A (as given below), the circumference&nbsp;and the diameter&nbsp;will be-</p>
+      <p align="center" class="style8"><img src="../image/Circumference-of-a-Circle-1.png" alt="CIRCUM" width="465" height="385" /></p>
+      <p class="style8">In other words, the distance surrounding a circle is known as the circumference of the circle. The diameter is the distance across a circle through the centre,&nbsp;and it touches the two points of the circle perimeter.&nbsp;<strong>&pi;&nbsp;</strong>shows the ratio of the perimeter of a circle to the diameter. Therefore, when you divide the circumference by the diameter for any circle, you obtain a value close enough to &pi;. This relationship can be explained by the formula mentioned below.</p>
+      <p class="style8"><strong>C/d = &pi;</strong></p>
+      <p class="style8">Where C indicates circumference and d indicates diameter. A different way to put up this formula is C = &pi; &times; d. This formula is mostly used when the diameter is mentioned, and the perimeter of a circle needs to be calculated.</p>
+      <p class="style8"><strong>Circumference to Diameter</strong></p>
+      <p class="style8">We know that the diameter of a circle is twice the radius. The proportion between the circumference of a circle and its diameter is equal to the value of Pi(&pi;). Hence, we say that this proportion is the definition of the constant &pi;.</p>
+      <p class="style8">(i.e) C= 2&pi;r</p>
+      <p class="style8">C= &pi;d (As, d = 2r)</p>
+      <p class="style8">If we divide both sides by the diameter of the circle, we will get the value that is approximately close to the value of &pi;.</p>
+      <p class="style8">Thus, C/d = &pi;.</p>
+	  <div id="method"></div>
+      <h2 class="style8"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></h2>
+      <h2 class="style8">How to Find Circumference?</h2>
+      <p class="style8"><strong>Method 1:&nbsp;</strong>Since it is a curved surface, we can&rsquo;t physically measure the length of a circle using a scale or ruler. But this can be done for polygons like squares, triangles and rectangles. Instead, we can measure the circumference of a circle using a thread. Trace the path of the circle using the thread and mark the points on the thread. This length can be measured using a normal ruler.</p>
+      <p class="style8"><strong>Method 2:&nbsp;</strong>An accurate way of knowing the circumference of a circle is to calculate it. For this, the radius of the circle has to be known. The radius of a circle is the distance from the centre of the circle and any point on the circle itself. The figure below shows a circle with radius R and centre O. The diameter is twice the radius of the circle.</p>
+      <div align="center" class="style8">
+        <p><img src="../image/Circumference-of-a-Circle-2.png" alt="CIR" width="402" height="372" /></p>
+		<div id="solved1"></div>
+        <h2 align="left"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></h2>
+        <h2 align="left" class="style9">Solved Examples on Perimeter of Circle</h2>
+        <p align="left"><strong>Example 1:&nbsp;</strong></p>
+        <p align="left">What is the circumference of the circle with diameter 4 cm?</p>
+        <p align="left"><strong>Solution:</strong></p>
+        <p align="left">Since the diameter is known to us, we can calculate the radius of the circle,</p>
+        <p align="left">Therefore, Circumference of the Circle = 2 x 3.14 x 2 = 12.56 cm.</p>
+        <p align="left"><strong>Example&nbsp;2:</strong></p>
+        <p align="left">Find the radius of the circle having C =&nbsp; 50 cm.</p>
+        <p align="left"><strong>Solution:&nbsp;</strong></p>
+        <p align="left">Circumference = 50 cm</p>
+        <p align="left">As per formula,&nbsp; C = 2 &pi;&nbsp; r</p>
+        <p align="left">This implies, 50 = 2 &pi;&nbsp; r</p>
+        <p align="left">50/2 = 2 &pi;&nbsp; r/2</p>
+        <p align="left">25 = &pi;&nbsp; r</p>
+        <p align="left">or r =&nbsp; 25/&pi;&nbsp;</p>
+        <p align="left">Therefore, the radius of the circle is 25/&pi;&nbsp; cm.</p>
+        <p align="left"><strong>Example 3:</strong></p>
+        <p align="left">Find the perimeter of circle whose radius is 3 cm?</p>
+        <p align="left"><strong>Solution:</strong></p>
+        <p align="left">Given: Radius = 3 cm.</p>
+        <p align="left">We know that the circumference or the perimeter of a circle is&nbsp;2&pi;r units.</p>
+        <p align="left">Now, substitute the radius value in the formula, we get</p>
+        <p align="left">C = (2)(22/7)(3)&nbsp; cm</p>
+        <p align="left">C =&nbsp;18.857 cm</p>
+        <p align="left">Therefore, the circumference of circle is&nbsp;18.857 cm.</p>
+        <p align="left"><strong>Example 4:&nbsp;</strong></p>
+        <p align="left">Calculate the perimeter of circle in terms of&nbsp;&pi;, whose diameter is 10m.</p>
+        <p align="left"><strong>Solution:</strong></p>
+        <p align="left">Given: Diameter = 10m.</p>
+        <p align="left">Hence, radius = diameter/2 = 10/2 = 5 m.</p>
+        <p align="left">We know that, perimeter of circle =&nbsp;2&pi;r units</p>
+        <p align="left">C =&nbsp;2&pi;(5) = 10&pi; m.</p>
+        <p align="left">Therefore, the perimeter of circle in terms of&nbsp;&pi;, whose diameter 10 cm is 10&pi; m.</p>
+        <p align="left"><strong>Example 5:</strong></p>
+        <p align="left">Find the perimeter and area of circle whose radius is 5 cm. [Note: &pi; = 3.14]</p>
+        <p align="left"><strong>Solution:</strong></p>
+        <p align="left">To find: Perimeter and area of circle.</p>
+        <p align="left">Given that, Radius, r = 5 cm and &pi; = 3.14</p>
+        <p align="left">As we know, the circumference (or) perimeter of a circle = 2&pi;r units</p>
+        <p align="left">The area of a circle = &pi;r&sup2; square units.</p>
+        <p align="left">Now, substitute the values in the perimeter and area of circle formula, we get</p>
+        <p align="left">The area of circle = &pi;r&sup2;= 3.14(5)2</p>
+        <p align="left">A = 3.14(25)</p>
+        <p align="left">A = 78.5 cm2</p>
+        <p align="left">The circumference of a circle = 2&pi;r = 2(3.14)(5)</p>
+        <p align="left">Circumference = 3.14(10) = 31.4 cm.</p>
+        <p align="left">Hence, the perimeter and area of circle are 31.4 cm and 78.5 cm2&nbsp;respectively.</p>
+		<div id="try1"></div>
+        <p align="left"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></p>
+        <h3 align="left">Practice/ Try Questions</h3>
+        <div align="left">
+          <ol>
+            <li>Calculate the perimeter of circle whose diameter is 8 cm.</li>
+            <li>What will be the diameter of a circle if it&rsquo;s C =&nbsp; 10 cm?</li>
+            <li>If C =&nbsp;&nbsp;12 cm, what will be its radius?</li>
+            <li>What is the circumference of a 16-inch circle?</li>
+            <li>What is the circumference of a 6 mm circle?</li>
+          </ol>
+        </div>
+      </div> 
+	  <div id="faqs1"></div>   
+      <h2 align="center" class="style6"><span class="style3"><img src="../image/bANNER.jpg" alt="BANNN" width="751" height="86" /></span></h2>
+      <h2 align="center" class="style6">Frequently Asked Questions on Circumference of a Circle</h2>
+      <div class="style8">
+        <div itemscope="" itemtype="https://schema.org/FAQPage">
+          <div>Q1</div>
+          <div>
+            <h3 itemprop="name">What is the Circumference of a Circle?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>The circumference of a circle is defined as the linear distance around it. In other words, if a circle is opened to form a straight line, then the length of that line will be the circle&rsquo;s circumference.</p>
+              </div>
+            </div>
+          </div>
+          <div>Q2</div>
+          <div>
+            <h3 itemprop="name">How to Calculate the Circumference of a Circle?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>To calculate the circumference of a circle, multiply the diameter of the circle with &pi; (pi). The circumference can also be calculated by multiplying 2&times;radius with pi (&pi;=3.14).</p>
+              </div>
+            </div>
+          </div>
+          <div>Q3</div>
+          <div>
+            <h3 itemprop="name">How to Calculate Diameter from Circumference?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>The formula for circumference = diameter &times; &pi;</p>
+                <p>Or, diameter = circumference/&pi;</p>
+                <p>So, the diameter of the circle in terms of circumference will be equal to the ratio of the circumference of the circle and pi.</p>
+              </div>
+            </div>
+          </div>
+          <div>Q4</div>
+          <div>
+            <h3 itemprop="name">What is the Circumference of a Circle with Radius 24 inches?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Circumference =&nbsp;2&times;&pi;&times;r</p>
+                <p>C = 2&times;3.14&times;24</p>
+                <p>C = 150.72 inches</p>
+              </div>
+            </div>
+          </div>
+          <div>Q5</div>
+          <div>
+            <h3 itemprop="name">What are the steps involved in finding the circumference of a circle if its area is given?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Step 1: Find the radius using the area of the circle formula (A = &pi;r2).<br />
+                  Step 2: Now, substitute the radius value in the circumference formula (C = 2&pi;r) to get the answer.</p>
+              </div>
+            </div>
+          </div>
+          <div>Q6</div>
+          <div>
+            <h3 itemprop="name">Which formula is used to find the perimeter of a circle, when its area is given?</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>If the area of a circle is given, then the formula to calculate the perimeter or a circumference of a circle is given by: C = 2&radic;(&pi;A) units.</p>
+              </div>
+            </div>
+          </div>
+          <div>Q7</div>
+          <div>
+            <h3 itemprop="name">Find the circumference of a circle in terms of &pi;, if the radius measures 3 cm.</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>We know that, Circumference = 2&pi;r = 2&pi;(3) = 6&pi;<br />
+                  Therefore, the circumference of a circle is 6&pi; cm, if its radius is 3 cm.</p>
+              </div>
+            </div>
+          </div>
+          <div>Q8</div>
+          <div>
+            <h3 itemprop="name">What is the circumference of a circle in terms of &pi;, if its diameter is 7 cm.</h3>
+            <div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>As we know, Circumference of a circle if its diameter is given = &pi; &times; d units.<br />
+                  Substituting d = 7 cm in the formula, we get<br />
+                  C = &pi; &times; 7 = 7&pi; units.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></th>
+    <th width="482" valign="top" scope="col"><div align="center">
+        <p><img src="../image/banner.png" alt="banner" width="470" height="676" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/download (1).jpeg" alt="ftf" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/images (12).jpeg" alt="gfy" width="318" height="159" /></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="../image/GEOMETRIC MOTION GRAPHIC ANIMATION.gif" alt="gif" width="400" height="225" /></p>
+    </div></th>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, values, and team.</p>
+          <a href="../ABOUT/About.html">Our History</a>
+          <a href="../ABOUT/About.html">Mission & Values</a>
+          <a href="../ABOUT/About.html">Meet the Team</a>        </div>
+
+      <div class="footer-column">
+            <h3>Quick Links</h3>
+          <a href="../ABOUT/About.html">Contact Us</a>
+          <a href="#faqs1">FAQ</a>
+      </div>
+
+    </div>
+</footer>
+</body>
+</html>

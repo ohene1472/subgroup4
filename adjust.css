@@ -1,0 +1,110 @@
+
+
+
+.hover-image img {
+    width: 100%; /* Ensure the image scales to fit its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* For small screens (mobile) */
+@media only screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .welcome-section {
+        padding: 50px 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    /* Adjust the font size for mobile */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* For medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links a {
+        padding: 10px 15px;
+    }
+
+    .footer {
+        padding: 15px 10px;
+    }
+}
+
+/* For larger screens (desktops) */
+@media only screen and (min-width: 1025px) {
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+    }
+
+    .welcome-section {
+        padding: 100px 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Example using Flexbox */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Example using Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3-column layout */
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
+
+h1 {
+    font-size: 3vw; /* Adjust the heading size based on the viewport width */
+}
+
+p {
+    font-size: 1.2em; /* Slightly larger than the default font size */
+}
+
+@media (max-width: 600px) {
+    .search-container {
+        display: none; /* Hide the search bar on mobile screens */
+    }
+}
+
